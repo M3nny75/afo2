@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIA - Equipo 3</title>
+    <style>
+        body {
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contenedor {
+            background-color: #1e293b;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 950px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .logo-izq, .logo-der {
+            position: absolute;
+            top: 25px;
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            border-radius: 6px;
+            background-color: #ffffff;
+            padding: 4px;
+            border: 1px solid #475569;
+        }
+
+        .logo-izq { left: 25px; }
+        .logo-der { right: 25px; }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+            color: #60a5fa;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        .subtitulo {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+            background-color: #0f172a;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px dashed #334155;
+            letter-spacing: 1px;
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .seccion-afo5 {
+            text-align: center;
+            background-color: #162032;
+            border: 1px solid #334155;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .seccion-afo5 span {
+            color: #38bdf8;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #0f172a;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #334155;
+            padding: 12px 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #0f172a;
+            color: #38bdf8;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #3b82f6;
+        }
+
+        tbody tr:nth-child(even) { background-color: #162032; }
+        tbody tr:hover { background-color: #273548; }
+
+        td a, .seccion-afo5 a {
+            color: #34d399;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        td a:hover, .seccion-afo5 a:hover {
+            background-color: #065f46;
+            color: #6ee7b7;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <img src="logo1.png" alt="Logo UANL" class="logo-izq">
+        <img src="logo2.png" alt="Logo FIME" class="logo-der">
+
+        <h1>PIA</h1>
+        <div class="subtitulo">EQUIPO 3</div>
+
+        <!-- AFO 5 GENERAL (Aparece una sola vez para todo el equipo) -->
+        <div class="seccion-afo5">
+            <span>AFO 5 (General):</span>
+            <a onclick="irAPagina('afo5_1.html')">Parte 1</a> / 
+            <a onclick="irAPagina('afo5_2.html')">Parte 2</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>AFO 2</th>
+                    <th>AFO 6</th>
+                    <th>AFO 7</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-cuerpo">
+                <!-- Se cargan dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function irAPagina(destino) {
+            alert("¡Alerta! Estás a punto de navegar a la página: " + destino);
+            window.location.href = destino;
+        }
+
+        const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+        <equipo id="3">
+            <integrante>
+                <matricula>1993581</matricula>
+                <nombre>Jose Manuel Barraza Chapa</nombre>
+                <carrera>IAS</carrera>
+                <afo2>intercambio.xml</afo2>
+                <afo6>af06.html</afo6>
+                <afo7>af07.html</afo7>
+            </integrante>
+            <integrante>
+                <matricula>2067285</matricula>
+                <nombre>Juan Carlos Cortez Rico</nombre>
+                <carrera>IAS</carrera>
+                <afo2>https://juan-ccr.github.io/02-intercambio/intercambio.xml</afo2>
+                <afo6>af06.html</afo6>
+                <afo7>af07.html</afo7>
+            </integrante>
+            <integrante>
+                <matricula>2222792</matricula>
+                <nombre>Ashlee Alejandra Doria Martinez</nombre>
+                <carrera>IAS</carrera>
+                <afo2>https://ashleedoria.github.io/XML-DORIA-/intercambio_academico_ias.xml</afo2>
+                <afo6>af06.html</afo6>
+                <afo7>af07.html</afo7>
+            </integrante>
+            <integrante>
+                <matricula>2092521</matricula>
+                <nombre>Johanna Jacqueline Montiel Bautista</nombre>
+                <carrera>IAS</carrera>
+                <afo2>https://ashleedoria.github.io/af-02-jacqui-/intercambio.xml</afo2>
+                <afo6>af06.html</afo6>
+                <afo7>af07.html</afo7>
+            </integrante>
+        </equipo>`;
+
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlString, "application/xml");
+        const integrantes = xml.getElementsByTagName("integrante");
+        const tbody = document.getElementById("tabla-cuerpo");
+
+        for (let i = 0; i < integrantes.length; i++) {
+            const mat = integrantes[i].getElementsByTagName("matricula")[0].textContent;
+            const nom = integrantes[i].getElementsByTagName("nombre")[0].textContent;
+            const car = integrantes[i].getElementsByTagName("carrera")[0].textContent;
+            const afo2 = integrantes[i].getElementsByTagName("afo2")[0].textContent;
+            const afo6 = integrantes[i].getElementsByTagName("afo6")[0].textContent;
+            const afo7 = integrantes[i].getElementsByTagName("afo7")[0].textContent;
+
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${mat}</td>
+                <td>${nom}</td>
+                <td>${car}</td>
+                <td><a onclick="irAPagina('${afo2}')">AFO 2</a></td>
+                <td><a onclick="irAPagina('${afo6}')">AFO 6</a></td>
+                <td><a onclick="irAPagina('${afo7}')">AFO 7</a></td>
+            `;
+            tbody.appendChild(fila);
+        }
+    </script>
+
+</body>
+</html>

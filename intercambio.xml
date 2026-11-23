@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Actividad Fundamental 02 - Programación Web
+  Alumno: José Manuel Barraza Chapa
+  Matrícula: 1993581
+  Carrera: Ingeniero Administrador de Sistemas (IAS)
+  Facultad: FIME - Universidad Autónoma de Nuevo León
+-->
+<intercambio_fime>
+
+    <alumno>
+        <nombre>José Manuel Barraza Chapa</nombre>
+        <matricula>1993581</matricula>
+        <carrera>Ingeniero Administrador de Sistemas (IAS)</carrera>
+        <facultad>Facultad de Ingeniería Mecánica y Eléctrica (FIME), UANL</facultad>
+    </alumno>
+
+    <requisitos_generales>
+        <promedio_minimo>85</promedio_minimo>
+        <avance_creditos>Haber aprobado al menos el 50% de los créditos del plan de estudios</avance_creditos>
+        <estatus>Ser alumno regular, sin materias reprobadas ni adeudos</estatus>
+        <documentos>
+            <documento>Kárdex certificado</documento>
+            <documento>Carta de motivos</documento>
+            <documento>Currículum Vitae</documento>
+            <documento>Formato de autorización de unidades de aprendizaje</documento>
+            <documento>Carta de apoyo de la Dirección de FIME</documento>
+        </documentos>
+        <donde_tramitar>Coordinación de Titulación y Movilidad Académica de FIME</donde_tramitar>
+    </requisitos_generales>
+
+    <universidad>
+        <nombre>Universidad de Guadalajara (UdeG)</nombre>
+        <tipo>Nacional</tipo>
+        <dependencia>Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI)</dependencia>
+        <ubicacion>Blvd. Marcelino García Barragán 1421, Olímpica, Guadalajara, Jalisco, México</ubicacion>
+        <como_cursar_ias>Cursando en CUCEI materias afines a IAS, como bases de datos, redes, sistemas operativos e ingeniería de software, autorizadas antes por la coordinación de FIME para que se reconozcan los créditos</como_cursar_ias>
+        <duracion>1 semestre académico</duracion>
+        <requisitos_clave>Promedio mínimo de 85, 50% de créditos aprobados, kárdex certificado, carta de motivos y seguro médico vigente</requisitos_clave>
+    </universidad>
+
+    <universidad>
+        <nombre>Universidad Politécnica de Madrid (UPM)</nombre>
+        <tipo>Internacional</tipo>
+        <dependencia>Escuela Técnica Superior de Ingeniería de Sistemas Informáticos (ETSISI)</dependencia>
+        <ubicacion>Carretera de Valencia km 7, Campus Sur, Madrid, España</ubicacion>
+        <como_cursar_ias>Eligiendo asignaturas de los grados de informática y sistemas de información de la ETSISI que sean equivalentes a las unidades de aprendizaje de IAS, con autorización previa de la Comisión Académica de FIME</como_cursar_ias>
+        <duracion>1 semestre académico</duracion>
+        <requisitos_clave>Promedio mínimo de 85, 50% de créditos aprobados, pasaporte vigente, seguro médico internacional, contenidos de las materias y acuerdo de equivalencias</requisitos_clave>
+    </universidad>
+
+</intercambio_fime>
